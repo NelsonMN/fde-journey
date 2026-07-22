@@ -1,7 +1,7 @@
 # From Solutions Engineer to Forward Deployed Engineer
 ### A 26-week roadmap (assumes ~10–15 hrs/week)
 
-**Starting point (from GitHub + CSC108):** Solid HTML/CSS/JS/React fundamentals, comfortable with git, can hit external APIs from the front end, basic Python exposure from university.
+**Starting point:** Solid HTML/CSS/JS/React fundamentals, comfortable with git, can hit external APIs from the front end, basic Python exposure from university.
 
 **Gap to close:** Backend/API development, databases/SQL, cloud & deployment, LLM/agent integration, systems design, and DS&A interview fluency.
 
