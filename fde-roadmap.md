@@ -34,8 +34,8 @@ Harvard's CS50P (free at cs50.harvard.edu/python — sign up, then use the cs50.
 - [x] Sign up at cs50.harvard.edu/python, set up cs50.dev codespace, run `update50`
 - [x] Lecture 0 (Functions, Variables)
 - [x] Problem Set 0 — Indoor Voice, Playback Speed, Making Faces, Einstein, Tip Calculator
-- [ ] Lecture 1 (Conditionals)
-- [ ] Problem Set 1
+- [x] Lecture 1 (Conditionals)
+- [x] Problem Set 1
 - [ ] Lecture 2 (Loops)
 - [ ] Problem Set 2
 
