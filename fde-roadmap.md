@@ -36,7 +36,7 @@ Harvard's CS50P (free at cs50.harvard.edu/python — sign up, then use the cs50.
 - [x] Problem Set 0 — Indoor Voice, Playback Speed, Making Faces, Einstein, Tip Calculator
 - [x] Lecture 1 (Conditionals)
 - [x] Problem Set 1
-- [ ] Lecture 2 (Loops)
+- [x] Lecture 2 (Loops)
 - [ ] Problem Set 2
 
 **Time split:** ~2–2.5 hrs for lecture 0 + pset 0 (light, mostly setup), ~3–4 hrs each for psets 1 and 2. Total ~10–12 hrs.
