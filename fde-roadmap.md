@@ -1,7 +1,7 @@
 # From Solutions Engineer to Forward Deployed Engineer
 ### A 26-week roadmap (assumes ~10–15 hrs/week)
 
-**Starting point (from GitHub + CSC108):** Solid HTML/CSS/JS/React fundamentals, comfortable with git, can hit external APIs from the front end, basic Python exposure from university.
+**Starting point:** Solid HTML/CSS/JS/React fundamentals, comfortable with git, can hit external APIs from the front end, basic Python exposure from university.
 
 **Gap to close:** Backend/API development, databases/SQL, cloud & deployment, LLM/agent integration, systems design, and DS&A interview fluency.
 
@@ -34,12 +34,12 @@
 Harvard's CS50P (free at cs50.harvard.edu/python — sign up, then use the cs50.dev cloud codespace). Organized as 10 lecture+problem-set pairs (0–9) plus a final project. Each pset auto-grades via `check50`.
 
 ### Week 1 — CS50P Weeks 0–2: Functions/Variables, Conditionals, Loops
-- [ ] Sign up at cs50.harvard.edu/python, set up cs50.dev codespace, run `update50`
-- [ ] Lecture 0 (Functions, Variables)
-- [ ] Problem Set 0 — Indoor Voice, Playback Speed, Making Faces, Einstein, Tip Calculator
-- [ ] Lecture 1 (Conditionals)
-- [ ] Problem Set 1
-- [ ] Lecture 2 (Loops)
+- [x] Sign up at cs50.harvard.edu/python, set up cs50.dev codespace, run `update50`
+- [x] Lecture 0 (Functions, Variables)
+- [x] Problem Set 0 — Indoor Voice, Playback Speed, Making Faces, Einstein, Tip Calculator
+- [x] Lecture 1 (Conditionals)
+- [x] Problem Set 1
+- [x] Lecture 2 (Loops)
 - [ ] Problem Set 2
 
 **Time split:** ~2–2.5 hrs for lecture 0 + pset 0 (light, mostly setup), ~3–4 hrs each for psets 1 and 2. Total ~10–12 hrs.
