@@ -21,8 +21,11 @@
 | 4 | 15–18 | LLM / agent integration |
 | 5 | 19–22 | Systems design + interview prep |
 | 6 | 23–26 | Capstone project + job search |
+| 7 (optional) | 27–34 | Backend depth + infrastructure/servers/cloud at scale |
 
-**Progress:** `0 / 26 weeks complete` ← update this line manually as you go, it's an easy way to see momentum at a glance.
+**Progress:** `0 / 26 core weeks complete` (`0 / 8 Phase 7 weeks complete`) ← update this line manually as you go, it's an easy way to see momentum at a glance.
+
+**On Phase 7:** this is genuinely optional and unbounded if you let it be — real scalability expertise mostly comes from operating something under real production traffic, which no side project fully replicates. What Phase 7 gets you is conceptual fluency plus real hands-on reps with the tools, which is a legitimate and valuable bar on its own. Start it after Week 26, not before — it leans on Docker (Phase 3) and your capstone project (Phase 6) as its foundation.
 
 ---
 
@@ -241,6 +244,74 @@ Harvard's CS50P (free at cs50.harvard.edu/python — sign up, then use the cs50.
 - [ ] Reach out to 2–3 actual FDEs for informational conversations
 
 **On track if:** at least one informational conversation is booked or completed.
+
+---
+
+## Phase 7 (optional): Backend Depth + Infrastructure/Servers/Cloud (Weeks 27–34)
+
+Builds directly on your Phase 3 (Docker) and Phase 6 (capstone) work — don't start this before Week 26. Order matters here more than in earlier phases: networking and security come first because everything downstream (IaC, Kubernetes, cloud) involves handling real credentials and real network config, and you want the right habits from the first line, not a bad habit you have to unlearn later.
+
+### Week 27 — Linux & networking fundamentals (incl. cloud networking)
+- [ ] Linux Journey (free, interactive): processes, permissions, systemd
+- [ ] OverTheWire "Bandit" wargame for real shell reps
+- [ ] Core networking: DNS, TCP/IP, ports, firewalls
+- [ ] Cloud-specific layer: VPC design — public/private subnets, route tables, NAT gateways, security groups vs. NACLs
+
+**On track if:** you can explain, using your own Phase 3 EC2 setup as the example, exactly which subnet/security-group rule is letting traffic reach your app.
+
+### Week 28 — Security depth (incl. cloud IAM)
+- [ ] Proper OAuth2 authorization-code flow (not just an API key)
+- [ ] OWASP Top 10 — read through, understand each at a conceptual level
+- [ ] Real secrets management (not a `.env` file committed by accident)
+- [ ] Cloud-specific layer: IAM depth — roles vs. users, policies, least privilege, instance roles
+
+**On track if:** you could set up a new cloud resource for a teammate with only the exact permissions they need, not "just give them admin to be safe."
+
+### Week 29 — Concurrency & async in Python
+- [ ] Python's `asyncio` docs, the GIL, threading vs. multiprocessing vs. async — when each actually applies
+- [ ] Convert your capstone's FastAPI endpoints to properly async
+- [ ] Benchmark before/after under simple load
+
+**On track if:** you can explain, with your own before/after numbers, why the async version handled more concurrent requests.
+
+### Week 30 — Caching & message queues
+- [ ] Redis basics
+- [ ] Celery or RQ for background jobs
+- [ ] Add a real caching layer to your capstone
+- [ ] Add one background task (e.g. simulate sending a batch of emails without blocking the request)
+
+**On track if:** you can point to a specific endpoint that got measurably faster because of caching, not just "I added Redis."
+
+### Week 31 — Database scaling
+- [ ] Read replicas — what they solve and what they don't
+- [ ] Connection pooling (PgBouncer)
+- [ ] `EXPLAIN ANALYZE` and real index tuning on your existing queries
+- [ ] Sharding — conceptual understanding only, not full implementation
+
+**On track if:** you can take a slow query from your own project, run `EXPLAIN ANALYZE` on it, and explain what's actually happening.
+
+### Week 32 — Infrastructure as Code
+- [ ] Learn **OpenTofu** (the open-source, Linux Foundation–governed fork of Terraform — same HCL syntax, better free-tier posture than Terraform post-2023 licensing change)
+- [ ] Codify your existing EC2 + security group setup from Phase 3 so it's reproducible with one command
+- [ ] Cloud-specific layer: extend it to provision a managed **RDS** instance instead of self-hosted Postgres
+
+**On track if:** you can destroy your entire EC2 setup and recreate it identically with one command, no manual clicking in the AWS console.
+
+### Week 33 — Container orchestration
+- [ ] Kubernetes core concepts on `minikube` or `k3d` (cheap, fast, no bill risk) — Deployments, Services, Pods
+- [ ] Deploy your dockerized capstone onto the infrastructure Week 32's IaC created — not a disconnected local-only exercise
+- [ ] Cloud-specific layer: deploy the same manifests to a real managed cluster (EKS or GKE) to see node groups and cloud-networking specifics
+
+**On track if:** the same K8s manifests that ran on minikube also run on a managed cluster with only config changes, not rewrites.
+
+### Week 34 — Load balancing & horizontal scaling (capstone)
+- [ ] Run multiple instances of your API behind a load balancer — nginx locally first, to learn the concept cheaply
+- [ ] Cloud-specific layer: swap in a real ALB (or equivalent) to see health checks and auto-scaling tied to it
+- [ ] Add a CDN in front of static assets
+- [ ] Load-test with `k6` or Locust — get real before/after numbers showing the scaling actually helped
+- [ ] Set a billing alert on your cloud account if you haven't already — a 5-minute task that's easy to skip until it costs you
+
+**On track if:** you have an actual before/after load-test result (requests/sec, latency under load) proving the scaled setup outperforms the single-instance version — numbers, not a feeling.
 
 ---
 
