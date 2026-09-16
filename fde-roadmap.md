@@ -40,7 +40,7 @@ Harvard's CS50P (free at cs50.harvard.edu/python — sign up, then use the cs50.
 - [x] Lecture 1 (Conditionals)
 - [x] Problem Set 1
 - [x] Lecture 2 (Loops)
-- [ ] Problem Set 2
+- [x] Problem Set 2
 
 **Time split:** ~2–2.5 hrs for lecture 0 + pset 0 (light, mostly setup), ~3–4 hrs each for psets 1 and 2. Total ~10–12 hrs.
 **On track if:** all three psets pass `check50`, and you can explain — without looking anything up — what a function signature is, what makes an expression "truthy," and how a `while` loop differs from a `for` loop.
