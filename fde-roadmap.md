@@ -46,7 +46,7 @@ Harvard's CS50P (free at cs50.harvard.edu/python — sign up, then use the cs50.
 **On track if:** all three psets pass `check50`, and you can explain — without looking anything up — what a function signature is, what makes an expression "truthy," and how a `while` loop differs from a `for` loop.
 
 ### Week 2 — CS50P Weeks 3–5: Exceptions, Libraries, Unit Tests
-- [ ] Lecture 3 (Exceptions)
+- [x] Lecture 3 (Exceptions)
 - [ ] Problem Set 3
 - [ ] Lecture 4 (Libraries — pip, third-party packages)
 - [ ] Problem Set 4
